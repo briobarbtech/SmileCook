@@ -1,0 +1,44 @@
+### Traer todas las recetas
+GET http://localhost:5000/recipes HTTP/1.1
+
+
+### Traer una receta especifica mediante ID
+
+GET http://localhost:5000/recipes/1 HTTP/1.1
+
+### POSTear una receta 
+POST http://localhost:5000/recipes HTTP/1.1
+content-Type: application/json
+
+{
+    "name":"Tomato salad",
+    "description":"This is a lovely tomato pasta recipe",
+    "num_of_servings":3,
+    "cook_time":15,
+    "directions":"This is how you make it"
+}
+
+### Publicar una receta
+
+PUT http://localhost:5000/recipes/1/publish HTTP/1.1
+
+### Quitar una receta
+
+DELETE http://localhost:5000/recipes/1/publish HTTP/1.1
+
+
+### Actualizar una receta
+PUT http://localhost:5000/recipes/1 HTTP/1.1
+Content-Type: application/json  
+
+{
+    "name":"Lovely Cheese Pizza",
+    "description":"This is a lovely cheese pizza recipe",
+    "num_of_servings":3,
+    "cook_time":60,
+    "directions":"This is how you make it"
+}
+
+### delete
+
+DELETE http://localhost:5000/recipes/1 HTTP/1.1
